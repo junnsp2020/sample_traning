@@ -1,20 +1,15 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= yield(:title) %> | Ruby on Rails Tutorial Sample App</title>
-    <%= render "layouts/rails_default" %>
-    <!--[if lt IE]>
-      <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js">
-      </script>
-    <![endif]-->
-    <%= render "layouts/shim" %>
+    <title><%= full_title(yield(:title)) %></title>
+    <%= render 'layouts/rails_default' %>
+    <%= render 'layouts/shim' %>
   </head>
-
   <body>
-    <%= render "layouts/header" %> 
+    <%= render 'layouts/header' %>
     <div class="container">
       <%= yield %>
-      <%= render "layouts/footer" %>
+      <%= render 'layouts/footer' %>
     </div>
   </body>
 </html>
